@@ -1,0 +1,74 @@
+/* Menu.scss (or Menu.css if you're not using SASS) */
+
+.menu {
+  background-color: #70259B;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.menu-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.menu-nav {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.menu-nav-button {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 5px;
+}
+
+.menu-nav-button:hover {
+  background-color: #70259B;
+  color: #ffffff;
+}
+
+.menu-lets-talk-button {
+  width: 96px; /* Set the width */
+  height: 37px; /* Set the height */
+  padding: 8px 16px; /* Set padding */
+  border-radius: 50px; /* Add border-radius */
+  gap: 8px; /* Add gap between text and button border */
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu-lets-talk-button:hover {
+  background-color: #c0392b;
+}
+
+/* Larger screens (e.g., laptops) */
+@media (min-width: 768px) {
+  .menu {
+    padding: 10px 40px; /* Adjust padding for larger screens */
+  }
+
+  .menu-nav-button {
+    margin-right: 15px; /* Adjust the margin for larger screens */
+    font-size: 18px; /* Increase font size for larger screens */
+  }
+}

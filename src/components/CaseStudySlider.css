@@ -1,0 +1,74 @@
+/* CaseStudySlider.css */
+
+/* Style for the container holding the image and text */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 399px;
+  left: 0;
+  margin-bottom: 20px;
+}
+
+/* Style for the text within the image */
+.image-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the icon */
+.image-text img.icon {
+  margin-right: 15px;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  /* background: #D100C9; Remove background color */
+}
+
+/* Style for the h3 element (title) within image-text */
+.image-text h3 {
+  margin: 5px 0;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Style for the p element (description) within image-text */
+.image-text p {
+  margin: 5px 0;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* Additional styles for responsiveness */
+.case-study-slider h2 {
+  margin-left: 80px;
+}
+
+.case-study-slider {
+  margin-left: 80px;
+}
+
+/* Media queries for responsiveness */
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+  .image-container {
+    max-width: 100%; /* Adjust the max-width for smaller screens */
+  }
+
+  .case-study-slider h2,
+  .case-study-slider {
+    margin-left: 20px; /* Adjust margins for smaller screens */
+  }
+}

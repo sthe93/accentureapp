@@ -1,0 +1,68 @@
+/* Brands.css */
+
+/* Style for the container holding the brand logos */
+.brands {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Style for the heading within the "Brands" section */
+.brand-heading {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* Style for the h2 element within the brand-heading */
+.brand-heading h2 {
+  display: flex;
+  align-items: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style for the icon within the h2 element */
+.brand-heading .icon {
+  margin-right: 10px;
+}
+
+/* Styling for the brand logos container */
+.brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Styling for the brand logos */
+.brand-logos img {
+  width: 150px;
+  height: auto;
+  margin: 20px;
+  background: transparent;
+  border: none;
+}
+
+/* Media queries for responsiveness */
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+  .brand-heading h2 {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  /* You can add more specific styles for smaller screens here */
+}
+
+/* For screens smaller than 480px (e.g., smaller smartphones) */
+@media (max-width: 480px) {
+  .brand-heading h2 {
+    font-size: 24px; /* Adjust font size for even smaller screens */
+  }
+
+  /* You can add more specific styles for smaller screens here */
+}

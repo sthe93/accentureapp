@@ -1,0 +1,32 @@
+/* fonts.css */
+
+/* Import the Inter Fonts (Regular, Medium, and Bold) */
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Apply Inter as the default font */
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  

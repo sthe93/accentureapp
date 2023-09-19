@@ -1,0 +1,83 @@
+/* Hero.scss (or Hero.css if you're not using SASS) */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 100vh; /* Use viewport height to fill the entire screen */
+  background-image: url('../assets/images/HeroImage.png');
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff;
+  display: flex; /* Use flex to center content vertically */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-end; /* Move content to the bottom of the hero */
+  padding: 0; /* Remove padding */
+}
+
+/* Rest of your existing styles... */
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  padding: 20px; /* Add padding for spacing */
+  max-width: 100%; /* Allow the content to take full width */
+}
+
+.hero-text {
+  text-align: left; /* Align text to the left */
+  max-width: 495px;
+  padding-left: 10px; /* Adjust padding-left as needed */
+}
+
+.hero-button {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Align button to the left */
+  margin-top: 30px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .hero-content {
+    padding: 10px; /* Decrease padding for smaller screens */
+  }
+
+  .hero-text {
+    max-width: 80%; /* Adjust text width for smaller screens */
+  }
+
+  /* Hero.scss (or Hero.css if you're not using SASS) */
+
+.hero-text h2 {
+  width: 495px;
+  height: 67px;
+  font-family: 'Inter';
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 67px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FAFAFA;
+  margin-bottom: 20px; /* Add margin for spacing */
+}
+
+
+  .hero-text p {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+}
