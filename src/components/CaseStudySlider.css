@@ -1,5 +1,7 @@
 /* CaseStudySlider.css */
 
+
+
 /* Style for the container holding the image and text */
 .image-container {
   position: relative;
@@ -8,6 +10,9 @@
   max-width: 399px;
   left: 0;
   margin-bottom: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(54, 54, 54, 0.1); /* Box shadow with transparency */
+  background: #FFFFFF;
+ 
 }
 
 /* Style for the text within the image */
@@ -52,15 +57,48 @@
 
 /* Additional styles for responsiveness */
 .case-study-slider h2 {
-  margin-left: 80px;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.case-study-slider .image-text h3 {
+  font-family: 'Inter';
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+  width: 351px;
+  height: 48px;
+}
+.case-study-slider .image-text p {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 250px;
+  height: 38px;
+}
+.case-study-slider .image-text img.icon {
+  width: 40px;
+  height: 4px;
+  color: #D100C9; /* Note: Color property may not apply to image elements, consider using the color of the surrounding container */
 }
 
 .case-study-slider {
-  margin-left: 80px;
+  margin-left: 20px;
 }
 
 /* Media queries for responsiveness */
-
 /* For screens smaller than 768px (e.g., smartphones) */
 @media (max-width: 768px) {
   .image-container {

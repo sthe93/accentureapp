@@ -1,4 +1,4 @@
-/* WhatWeDo.scss (or WhatWeDo.css if you're not using SASS) */
+/* WhatWeDo.css (or WhatWeDo.scss) */
 
 .what-we-do {
   display: flex;
@@ -9,95 +9,86 @@
   background-color: #f8f8f8;
   position: relative;
   overflow-x: hidden;
+  justify-content: center; /* Vertically center-align items */
 }
 
-.what-we-do-heading {
-  max-width: 600px;
-  margin-bottom: 40px;
-  margin-left: 80px; /* Adjust the left margin to align with the menu/logo */
+.heading-container {
+  display: flex;
+  align-items: center; /* Vertically align the content */
+}
+.what-we-do-heading h2 {
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  
+}
+
+.what-we-do-text {
+  max-width: 100%; /* Set the maximum width to 100% */
+  margin-left: 0; /* Remove the left margin */
+  padding-left: 20px; /* Add padding to align with other content */
+  border-left: none; /* Remove the left border */
+}
+
+.what-we-do-text p {
+  font-family: 'Inter';
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 67px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #242424;
+  margin-top: 20px; /* Add spacing between h2 and p */
+  overflow: hidden; /* Hide overflowing text */
 }
 
 .service-container {
   display: flex;
-  flex-wrap: nowrap; /* Prevent services from wrapping to the next line */
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-left: 80px; /* Adjust the left margin to align with the menu/logo */
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
-.what-we-do h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 10px;
+.service {
+  margin: 0 20px 20px 0;
 }
-
-.what-we-do p {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #666;
-}
-
-.what-we-do-heading h2 {
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  margin-right: 10px;
-}
-
-.service-container .service {
-  width: calc(25% - 20px); /* Set width for each service (25% of container width with spacing) */
-  padding: 20px;
-  text-align: left;
-  margin-bottom: 20px; /* Adjust the margin between services */
-  border: none;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.service-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
 .service h3 {
-  font-family: 'Inter', sans-serif;
+  width: 290px;
+  height: 41px;
+  top: 1234px;
+  left: 85px;
+  color: #000000;
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.service p {
+  
+  color: #000000;
+  font-family: 'Inter';
   font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.service p {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #666;
-}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .what-we-do-heading {
+  .what-we-do-heading-content {
     margin-left: 0; /* Remove left margin on smaller screens */
   }
 
   .service-container {
     flex-direction: column; /* Change to column layout on smaller screens */
     align-items: flex-start; /* Align items to the left on smaller screens */
-    margin-left: 0; /* Remove left margin on smaller screens */
-  }
-
-  .service-container .service {
-    width: 100%; /* Make services occupy full width on smaller screens */
     margin-left: 0; /* Remove left margin on smaller screens */
   }
 }

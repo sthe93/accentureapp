@@ -45,28 +45,27 @@ function CaseStudySlider() {
   };
 
   return (
+    
     <div className="case-study-slider">
       <h2><img src={WhatWeDoIcon} alt="Contact Icon" className="icon" />Case Studies</h2>
       <Slider {...sliderSettings}>
-        {caseStudies.map((caseStudy, index) => (
-          <div key={caseStudy.id} className="case-study">
-            <div className="image-container">
-              <img
-                src={index === 0 ? image1 : index === 1 ? image2 : image3}
-                alt={caseStudy.title}
-              />
-              
-              <div className="image-text">
-                
-                <div>
-                <img src={WhatWeDoIcon} alt="Contact Icon" className="icon" />
-                  <h3>{caseStudy.title}</h3>
-                  <p>{caseStudy.description}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+      {caseStudies.map((caseStudy, index) => (
+  <div key={caseStudy.id} className="case-study">
+    <div className="image-container">
+      <img
+        src={index === 0 ? image1 : index === 1 ? image2 : image3}
+        alt={caseStudy.title}
+      />
+      <div className="image-text"> {/* Use a common class for all text containers */}
+        <div>
+          <img src={WhatWeDoIcon} alt="Contact Icon" className="icon" />
+          <h3>{caseStudy.title}</h3>
+          <p>{caseStudy.description}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+))}
       </Slider>
     </div>
   );

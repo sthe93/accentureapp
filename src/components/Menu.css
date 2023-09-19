@@ -7,7 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+}
+/* Inside Menu.css or Menu.scss */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  margin-right: 0; /* Remove any default margin */
 }
 
 .menu-logo {
@@ -21,21 +30,54 @@
   list-style: none;
   display: flex;
   margin-right: 20px;
+  flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
 }
 
 .menu-nav-button {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: auto;
+  /* Default button styles */
   background-color: transparent;
-  border: none;
-  font-size: 16px;
   color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-right: 5px;
+  text-transform: uppercase;
+  margin-bottom: 10px; /* Add spacing between menu items */
+}
+
+/* Add custom styles for specific attributes */
+.menu-nav-button[color="primary"] {
+  background-color: #70259B;
+}
+
+.menu-nav-button[size="normal"] {
+  /* Adjust size as needed */
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.menu-nav-button[content="text only"] {
+  /* Styles for text-only content */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.menu-nav-button[state="normal"] {
+  /* Styles for normal state */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-nav-button[type="fill"] {
+  /* Styles for filled buttons */
+  color: #ffffff;
+  background-color: #70259B;
 }
 
 .menu-nav-button:hover {
@@ -44,31 +86,37 @@
 }
 
 .menu-lets-talk-button {
-  width: 96px; /* Set the width */
-  height: 37px; /* Set the height */
-  padding: 8px 16px; /* Set padding */
-  border-radius: 50px; /* Add border-radius */
-  gap: 8px; /* Add gap between text and button border */
-  background-color: #e74c3c;
-  color: #ffffff;
+  width: 96px;
+  height: 37px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #70259B;
   border: none;
   font-weight: bold;
-  text-transform: uppercase;
   cursor: pointer;
-}
-
-.menu-lets-talk-button:hover {
-  background-color: #c0392b;
+  font-size: 11px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 /* Larger screens (e.g., laptops) */
 @media (min-width: 768px) {
   .menu {
-    padding: 10px 40px; /* Adjust padding for larger screens */
+    padding: 10px 40px;
+  }
+
+  .menu-nav {
+    flex-wrap: nowrap; /* Prevent menu items from wrapping on larger screens */
   }
 
   .menu-nav-button {
-    margin-right: 15px; /* Adjust the margin for larger screens */
-    font-size: 18px; /* Increase font size for larger screens */
+    margin-right: 15px;
+    font-size: 18px;
+    margin-bottom: 0; /* Remove spacing between menu items on larger screens */
   }
 }

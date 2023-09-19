@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="hero-text">
           <h2>Live with Confidence</h2>
           <p>José Mourinho brings confidence to pan-African Sanlam campaign.</p>
-          <button className="hero-button">View project</button>
+          <button className="hero-button primary">View project</button>
         </div>
       </div>
     </section>

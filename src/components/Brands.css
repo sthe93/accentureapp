@@ -1,68 +1,80 @@
-/* Brands.css */
-
 /* Style for the container holding the brand logos */
 .brands {
-  background-color: #f8f8f8;
-  padding: 40px 0;
-  text-align: center;
+  margin-left: 20px;
 }
 
 /* Style for the heading within the "Brands" section */
 .brand-heading {
   max-width: 600px;
-  margin: 0 auto 40px;
-  text-align: center;
+  margin: 0 0 40px;
+  text-align: left;
 }
 
-/* Style for the h2 element within the brand-heading */
+/* Style for the h2 elements within the brand-heading */
 .brand-heading h2 {
-  display: flex;
-  align-items: left;
-  font-family: 'Inter', sans-serif;
-  font-size: 36px;
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  white-space: nowrap;
+}
+
+/* Style for the h3 element within the brand-heading */
+.brand-heading h3 {
+  font-family: 'Inter';
+  font-size: 48px;
   font-weight: 700;
-  color: #333;
-  margin-bottom: 10px;
+  line-height: 67px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #242424;
+  margin-bottom: 20px;
+  white-space: nowrap;
 }
 
-/* Style for the icon within the h2 element */
-.brand-heading .icon {
-  margin-right: 10px;
-}
-
-/* Styling for the brand logos container */
+/* Styling for the brand logos container using CSS Grid */
 .brand-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns with equal width */
+  gap: 20px; /* Adjust the gap between images as needed */
   margin-bottom: 40px;
+  justify-items: start; /* Align content to the start (left) */
 }
 
 /* Styling for the brand logos */
 .brand-logos img {
-  width: 150px;
-  height: auto;
-  margin: 20px;
+  width: 50%; /* Make sure images take up the entire grid cell */
+  height: auto; /* Maintain aspect ratio */
   background: transparent;
   border: none;
 }
 
 /* Media queries for responsiveness */
-
 /* For screens smaller than 768px (e.g., smartphones) */
 @media (max-width: 768px) {
-  .brand-heading h2 {
-    font-size: 28px; /* Adjust font size for smaller screens */
+  .brand-logos {
+    grid-template-columns: repeat(3, 1fr); /* Adjust columns for smaller screens */
   }
-
-  /* You can add more specific styles for smaller screens here */
+  
+  /* Adjust font size and line-height for h3 on smaller screens */
+  .brand-heading h3 {
+    font-size: 36px;
+    line-height: 50px;
+  }
 }
 
 /* For screens smaller than 480px (e.g., smaller smartphones) */
 @media (max-width: 480px) {
-  .brand-heading h2 {
-    font-size: 24px; /* Adjust font size for even smaller screens */
+  .brand-logos {
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns for even smaller screens */
   }
-
-  /* You can add more specific styles for smaller screens here */
+  
+  /* Adjust font size and line-height for h3 on even smaller screens */
+  .brand-heading h3 {
+    font-size: 24px;
+    line-height: 34px;
+  }
 }

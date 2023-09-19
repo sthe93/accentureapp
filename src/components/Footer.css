@@ -29,14 +29,24 @@
   margin-top: 20px;
 }
 
-
+/* Add this style to underline the specific email address */
+.email-link {
+  text-decoration: underline;
+  color: white; /* You can adjust the color as needed */
+}
 
 
 .contact-heading h2 {
   display: flex;
   align-items: center;
   font-size: 24px;
-  color: white;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
 }
 
 .icon {
@@ -53,9 +63,16 @@
   margin-top: 20px; /* Add margin on smaller screens */
 }
 
+/* Style for the .address-row class */
 .address-row {
-  text-align: center; /* Center align on smaller screens */
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
 }
+
 
 .address-row a {
   display: block;
@@ -68,12 +85,14 @@
   height: auto; /* Remove fixed height */
   color: #F5F5F5;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 56px;
   letter-spacing: 0em;
-  text-align: center; /* Center align on smaller screens */
+  text-align: left; /* Center align on smaller screens */
+  word-wrap: break-word;
 }
+
 
 .footer-links {
   display: flex;
@@ -99,23 +118,20 @@
   color: #FFFFFF;
 }
 
+/* Style for the .social-links-row a elements */
 .social-links-row a {
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Reduce the space between links */
   text-decoration: none; 
   color: white;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
 }
 
-/* Add additional styling for the "explore open jobs" and "company name" */
+/* Rest of your existing CSS styles */
 
-.social-links-row:last-child {
-  margin-right: 20px; /* Add margin to the last link group */
-}
 
-.social-links-row:last-child a {
-  margin-bottom: 5px; /* Add some spacing between the links */
-}
-.empty-space {
-  margin-left: 20px; /* Adjust the margin as needed to create the desired space */
-  margin-right: 20px; /* You can adjust margin-right if needed */
-}
+
 

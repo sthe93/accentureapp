@@ -12,12 +12,16 @@ import './WhatWeDo.css';
 const WhatWeDo = () => {
   return (
     <section className="what-we-do">
-      <div className="what-we-do-heading">
-        <h2><img src={WhatWeDoIcon} alt="What We Do Icon" className="icon" />What we do</h2>
-        <p>We offer a complete range of bespoke design and development services to help you turn your ideas into digital masterpieces.</p>
+      <div className="heading-container">
+        <div className="what-we-do-heading">
+          <h2><img src={WhatWeDoIcon} alt="What We Do Icon" className="icon" />What we do</h2>
+        </div>
+      </div>
+      <div className="what-we-do-text">
+        <p>We offer a complete range of bespoke design and development services to help you turn your ideas into digital masterpieces</p>
       </div>
       <div className="service-container">
-        <div className="service">
+      <div className="service">
           <img src={WebDevIcon} alt="Web Development Icon" className="service-icon" />
           <h3>Web development</h3>
           <p>We use cutting-edge web development technologies to help our clients fulfill their business goals through functional, reliable solutions.</p>

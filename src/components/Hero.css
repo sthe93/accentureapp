@@ -1,30 +1,37 @@
 /* Hero.scss (or Hero.css if you're not using SASS) */
 
+/* Hero.css (or Hero.scss) */
+
 .hero {
   position: relative;
   overflow: hidden;
   text-align: center;
   width: 100%;
-  height: 100vh; /* Use viewport height to fill the entire screen */
+  height: 100vh;
   background-image: url('../assets/images/HeroImage.png');
   background-size: cover;
   background-position: center center;
   color: #ffffff;
-  display: flex; /* Use flex to center content vertically */
-  flex-direction: column; /* Stack content vertically */
-  justify-content: flex-end; /* Move content to the bottom of the hero */
-  padding: 0; /* Remove padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  padding: 0;
 }
+
 
 /* Rest of your existing styles... */
 
+
+/* Hero.css (or Hero.scss) */
+
 .hero-content {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
-  padding: 20px; /* Add padding for spacing */
-  max-width: 100%; /* Allow the content to take full width */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 100%;
+  margin-top: 90px; /* Add margin to move content down */
 }
 
 .hero-text {
@@ -33,19 +40,28 @@
   padding-left: 10px; /* Adjust padding-left as needed */
 }
 
+/* Hero.css (or Hero.scss) */
+
 .hero-button {
-  background-color: #e74c3c;
-  color: #ffffff;
+  background: #70259B; /* Background color */
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF; /* Text color */
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: flex-start; /* Align button to the left */
   margin-top: 30px;
+
+  
 }
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -54,30 +70,45 @@
   }
 
   .hero-content {
-    padding: 10px; /* Decrease padding for smaller screens */
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Distribute space between logo and text */
+    align-items: center; /* Vertically center-align items */
+    padding: 20px; /* Add padding for spacing */
+    max-width: 100%; /* Allow the content to take full width */
   }
 
+  
   .hero-text {
-    max-width: 80%; /* Adjust text width for smaller screens */
+    text-align: left; /* Align text to the left */
+    padding-left: 90px !important;
+    max-width: 80%;
   }
 
   /* Hero.scss (or Hero.css if you're not using SASS) */
 
+/* Hero.css (or Hero.scss) */
+
 .hero-text h2 {
-  width: 495px;
-  height: 67px;
   font-family: 'Inter';
-  font-size: 48px;
+  font-size: 64px; /* Increase the font size to your desired value */
   font-weight: 700;
-  line-height: 67px;
+  line-height: 72px; /* Adjust line height as needed */
   letter-spacing: 0em;
   text-align: left;
   color: #FAFAFA;
-  margin-bottom: 20px; /* Add margin for spacing */
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-family: 'Inter';
+  font-size: 24px; /* Increase the font size to your desired value */
+  font-weight: 400;
+  line-height: 36px; /* Adjust line height as needed */
+  letter-spacing: 0em;
+  text-align: left;
+  color: #F5F5F5;
 }
 
 
-  .hero-text p {
-    font-size: 16px; /* Decrease font size for smaller screens */
-  }
 }

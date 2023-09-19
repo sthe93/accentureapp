@@ -9,7 +9,10 @@ const Footer = () => {
         <div className="contact-heading">
           <h2><img src={WhatWeDoIcon} alt="Contact Icon" className="icon" />Contact Us</h2>
           <div className="project-info">
-            <p>Have a project in mind? Let's make it happen</p>
+            <p>
+          <span>Have a project in mind?</span><br />
+          Let's make it happen
+        </p>
           </div>
         </div>
        
@@ -18,7 +21,7 @@ const Footer = () => {
             <a>22 Street Name, Suburb, 8000</a>
             <a>Cape Town, South Africa</a>
             <a>+27 21 431 0001</a>
-            <a>@website.co.za</a>
+            <a className="email-link">enquirie@website.co.za</a>
           </div>
           
         </div>
@@ -45,8 +48,7 @@ const Footer = () => {
           <a href="#">Dribbble</a>
         </div>
         <div className="social-links-row">
-          <a href="#">explore open jobs</a>
-          <a className="empty-space"></a>
+          <a href="#">Explore open jobs</a>
           <a href="#">2000-2003 company name</a>
         </div>
       </div>
