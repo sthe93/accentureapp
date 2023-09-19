@@ -1,6 +1,5 @@
 import React from 'react';
-import './Menu.css'; // Import the CSS file with styles
-// Import your logo images
+import './Menu.css'; 
 import VectorLogo from '../assets/icons/logo/Vector.png';
 import Vector1Logo from '../assets/icons/logo/Vector1.png';
 import BrandLogo from '../assets/icons/logo/BRAND.png';

@@ -1,4 +1,3 @@
-/* Menu.scss (or Menu.css if you're not using SASS) */
 
 .menu {
   background-color: #70259B;
@@ -7,16 +6,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+  flex-wrap: wrap; 
 }
-/* Inside Menu.css or Menu.scss */
+
 .logo-container {
   display: flex;
   align-items: center;
 }
 
 .logo-container img {
-  margin-right: 0; /* Remove any default margin */
+  margin-right: 0; 
 }
 
 .menu-logo {
@@ -30,11 +29,10 @@
   list-style: none;
   display: flex;
   margin-right: 20px;
-  flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .menu-nav-button {
-  /* Default button styles */
   background-color: transparent;
   color: #ffffff;
   padding: 10px 20px;
@@ -49,33 +47,28 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-right: 5px;
   text-transform: uppercase;
-  margin-bottom: 10px; /* Add spacing between menu items */
+  margin-bottom: 10px; 
 }
 
-/* Add custom styles for specific attributes */
 .menu-nav-button[color="primary"] {
   background-color: #70259B;
 }
 
 .menu-nav-button[size="normal"] {
-  /* Adjust size as needed */
   font-size: 14px;
   padding: 10px 20px;
 }
 
 .menu-nav-button[content="text only"] {
-  /* Styles for text-only content */
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .menu-nav-button[state="normal"] {
-  /* Styles for normal state */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .menu-nav-button[type="fill"] {
-  /* Styles for filled buttons */
   color: #ffffff;
   background-color: #70259B;
 }
@@ -104,19 +97,18 @@
   text-align: left;
 }
 
-/* Larger screens (e.g., laptops) */
 @media (min-width: 768px) {
   .menu {
     padding: 10px 40px;
   }
 
   .menu-nav {
-    flex-wrap: nowrap; /* Prevent menu items from wrapping on larger screens */
+    flex-wrap: nowrap; 
   }
 
   .menu-nav-button {
     margin-right: 15px;
     font-size: 18px;
-    margin-bottom: 0; /* Remove spacing between menu items on larger screens */
+    margin-bottom: 0; 
   }
 }

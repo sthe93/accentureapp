@@ -1,36 +1,47 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Slider from 'react-slick';
 import './CaseStudySlider.css';
 import { fetchCaseStudies } from '../api/api';
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import WhatWeDoIcon from '../assets/icons/Rectangle1.svg';
-import image1 from '../assets/images/image1.png';
-import image2 from '../assets/images/image2.png';
-import image3 from '../assets/images/image3.png';
 
-
-
-function CaseStudySlider() {
+const CaseStudySlider = () => {
   const [caseStudies, setCaseStudies] = useState([]);
+  const [error, setError] = useState(null);
+
+  const fetchData = async () => {
+    try {
+      const data = await fetchCaseStudies();
+      setCaseStudies(data);
+    } catch (error) {
+      setError(error);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchCaseStudies();
-        setCaseStudies(data);
-      } catch (error) {
-        // Handle errors here
-      }
-    };
-
     fetchData();
   }, []);
 
+  const imagePaths = useMemo(() => {
+    return [
+      require('../assets/images/image1.png'),
+      require('../assets/images/image2.png'),
+      require('../assets/images/image3.png'),
+    ];
+  }, []);
+
+  const handleRetry = () => {
+    fetchData();
+    setError(null);
+  };
+
+  // Set slidesToShow to the number of images
+  const slidesToShow = imagePaths.length;
+
   const sliderSettings = {
-    slidesToShow: 3,
+    slidesToShow, // Set slidesToShow to the number of images
     slidesToScroll: 1,
     arrows: true,
     gutter: 10,
@@ -38,37 +49,45 @@ function CaseStudySlider() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // For screens smaller than 768px, show only 1 slide
         },
       },
     ],
   };
 
   return (
-    
     <div className="case-study-slider">
-      <h2><img src={WhatWeDoIcon} alt="Contact Icon" className="icon" />Case Studies</h2>
-      <Slider {...sliderSettings}>
-      {caseStudies.map((caseStudy, index) => (
-  <div key={caseStudy.id} className="case-study">
-    <div className="image-container">
-      <img
-        src={index === 0 ? image1 : index === 1 ? image2 : image3}
-        alt={caseStudy.title}
-      />
-      <div className="image-text"> {/* Use a common class for all text containers */}
+      <h2>
+        <img src={WhatWeDoIcon} alt="Contact Icon" className="icon" /> Case Studies
+      </h2>
+      {error ? (
         <div>
-          <img src={WhatWeDoIcon} alt="Contact Icon" className="icon" />
-          <h3>{caseStudy.title}</h3>
-          <p>{caseStudy.description}</p>
+          <p>Error: {error.message}</p>
+          <button onClick={handleRetry}>Retry</button>
         </div>
-      </div>
-    </div>
-  </div>
-))}
-      </Slider>
+      ) : (
+        <Slider {...sliderSettings}>
+          {caseStudies.map((caseStudy, index) => (
+            <div key={caseStudy.id} className="case-study">
+              <div className="image-container">
+                <img
+                  src={imagePaths[index % imagePaths.length]}
+                  alt={caseStudy.title}
+                />
+                <div className="image-text">
+                  <div>
+                    <img src={WhatWeDoIcon} alt="Contact Icon" className="icon" />
+                    <h3>{caseStudy.title}</h3>
+                    <p>{caseStudy.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      )}
     </div>
   );
-}
+};
 
 export default CaseStudySlider;

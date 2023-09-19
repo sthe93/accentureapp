@@ -1,7 +1,6 @@
-// WhatWeDo.js
 
 import React from 'react';
-import WebDevIcon from '../assets/icons/webdevicon.svg'; // Replace with the actual icon filename
+import WebDevIcon from '../assets/icons/webdevicon.svg'; 
 import UxIcon from '../assets/icons/uxicon.svg';
 import AppDevIcon from '../assets/icons/appdevicon.svg';
 import BlockChainIcon from '../assets/icons/blockchainicon.svg';

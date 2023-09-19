@@ -47,10 +47,12 @@ const Footer = () => {
           <a href="#">Behance</a>
           <a href="#">Dribbble</a>
         </div>
-        <div className="social-links-row">
-          <a href="#">Explore open jobs</a>
-          <a href="#">2000-2003 company name</a>
-        </div>
+        <div className="social-links-row single-line-text">
+  <a href="#">Explore open jobs</a>
+  <a href="">&copy;2000&ndash;2023 Company Name</a>
+</div>
+
+
       </div>
     </div>
   );

@@ -1,16 +1,15 @@
-/* Style for the container holding the brand logos */
+
 .brands {
   margin-left: 20px;
 }
 
-/* Style for the heading within the "Brands" section */
+
 .brand-heading {
   max-width: 600px;
   margin: 0 0 40px;
   text-align: left;
 }
 
-/* Style for the h2 elements within the brand-heading */
 .brand-heading h2 {
   font-family: 'Inter';
   font-size: 20px;
@@ -20,9 +19,9 @@
   text-align: left;
   color: #000000;
   white-space: nowrap;
+  display: flex; 
+  align-items: center; 
 }
-
-/* Style for the h3 element within the brand-heading */
 .brand-heading h3 {
   font-family: 'Inter';
   font-size: 48px;
@@ -35,44 +34,40 @@
   white-space: nowrap;
 }
 
-/* Styling for the brand logos container using CSS Grid */
 .brand-logos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns with equal width */
-  gap: 20px; /* Adjust the gap between images as needed */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px; 
   margin-bottom: 40px;
-  justify-items: start; /* Align content to the start (left) */
+  justify-items: start; 
 }
 
-/* Styling for the brand logos */
+
 .brand-logos img {
-  width: 50%; /* Make sure images take up the entire grid cell */
-  height: auto; /* Maintain aspect ratio */
+  width: 50%;
+  height: auto; 
   background: transparent;
   border: none;
 }
 
-/* Media queries for responsiveness */
-/* For screens smaller than 768px (e.g., smartphones) */
 @media (max-width: 768px) {
   .brand-logos {
-    grid-template-columns: repeat(3, 1fr); /* Adjust columns for smaller screens */
+    grid-template-columns: repeat(3, 1fr); 
   }
-  
-  /* Adjust font size and line-height for h3 on smaller screens */
+
   .brand-heading h3 {
     font-size: 36px;
     line-height: 50px;
   }
 }
 
-/* For screens smaller than 480px (e.g., smaller smartphones) */
+
 @media (max-width: 480px) {
   .brand-logos {
-    grid-template-columns: repeat(2, 1fr); /* Adjust columns for even smaller screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
   
-  /* Adjust font size and line-height for h3 on even smaller screens */
+
   .brand-heading h3 {
     font-size: 24px;
     line-height: 34px;
